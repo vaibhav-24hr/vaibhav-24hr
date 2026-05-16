@@ -40,8 +40,6 @@
     </td>
     <td width="40%" align="center">
       <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=14&pause=1000&color=A9B7C6&center=true&vCenter=true&width=350&height=100&lines=%22Code+is+like+humor.%22;%22When+you+have+to+explain+it%2C%22;%22it%E2%80%99s+bad.%22+-+Cory+House" alt="Quote SVG" />
-      <br>
-      <img src="https://github-readme-stats.vercel.app/api/pin/?username=vaibhav-24hr&repo=vaibhav-24hr&theme=radium&hide_border=true" alt="Pinned Repo" />
     </td>
   </tr>
 </table>
@@ -71,7 +69,7 @@
 ### 🏆 GitHub Trophies
 <div align="center">
   <a href="https://github.com/ryo-ma/github-profile-trophy">
-    <img src="https://github-profile-trophy.vercel.app/?username=vaibhav-24hr&theme=radium&no-frame=true&no-bg=true&margin-w=15&column=7" alt="Trophies" />
+    <img src="https://github-profile-trophy.vercel.app/?username=vaibhav-24hr&theme=dracula&no-frame=true&no-bg=true&margin-w=15&column=7" alt="Trophies" />
   </a>
 </div>
 
@@ -118,16 +116,7 @@
   </tr>
 </table>
 
----
 
-### 📈 GitHub Analytics
-
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=vaibhav-24hr&show_icons=true&theme=radium&hide_border=true&bg_color=0D1117" height="180px" alt="GitHub Stats" />
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=vaibhav-24hr&theme=radium&hide_border=true&background=0D1117" height="180px" alt="GitHub Streak" />
-  <br><br>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=vaibhav-24hr&layout=compact&theme=radium&hide_border=true&bg_color=0D1117" height="180px" alt="Top Languages" />
-</div>
 
 ---
 <div align="center">
