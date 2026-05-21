@@ -59,18 +59,6 @@
 
 ---
 
-### 📊 GitHub Stats
-
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=vaibhav-24hr&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&include_all_commits=true" height="170" alt="GitHub Stats" />
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=vaibhav-24hr&theme=tokyonight&hide_border=true" height="170" alt="GitHub Streak" />
-</div>
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=vaibhav-24hr&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" alt="Top Languages" />
-</div>
-
----
-
 ### 🛠️ Technical Arsenal
 
 <div align="center">
@@ -104,9 +92,8 @@
         <code>React Native</code> <code>Node.js</code> <code>Supabase</code> <code>Gemini</code>
       </p>
       <p align="center">
-        <!-- TODO: replace href with the actual repo URL -->
-        <a href="https://github.com/vaibhav-24hr"><img src="https://img.shields.io/badge/Source-181717?style=for-the-badge&logo=github&logoColor=white" alt="Source" /></a>
-        <img src="https://img.shields.io/badge/Status-In%20Development-yellow?style=for-the-badge" alt="Status" />
+        <a href="https://aura-caliente.netlify.app/"><img src="https://img.shields.io/badge/Live%20Demo-00C853?style=for-the-badge&logo=netlify&logoColor=white" alt="Live Demo" /></a>
+        <a href="https://github.com/WMDD-Capstone"><img src="https://img.shields.io/badge/Source-181717?style=for-the-badge&logo=github&logoColor=white" alt="Source" /></a>
       </p>
     </td>
     <td width="50%">
@@ -117,9 +104,8 @@
         <code>Node.js</code> <code>OpenAI</code> <code>AWS EC2</code> <code>Chart.js</code>
       </p>
       <p align="center">
-        <!-- TODO: replace href with the actual repo URL -->
-        <a href="https://github.com/vaibhav-24hr"><img src="https://img.shields.io/badge/Source-181717?style=for-the-badge&logo=github&logoColor=white" alt="Source" /></a>
-        <img src="https://img.shields.io/badge/Status-In%20Development-yellow?style=for-the-badge" alt="Status" />
+        <a href="https://bloomup.wmdd.ca/"><img src="https://img.shields.io/badge/Live%20Demo-00C853?style=for-the-badge&logo=netlify&logoColor=white" alt="Live Demo" /></a>
+        <a href="https://github.com/YunMatsuura-school-account/BloomUp"><img src="https://img.shields.io/badge/Source-181717?style=for-the-badge&logo=github&logoColor=white" alt="Source" /></a>
       </p>
     </td>
   </tr>
@@ -132,7 +118,6 @@
         <code>Firebase</code> <code>Supabase</code> <code>PWA</code>
       </p>
       <p align="center">
-        <!-- TODO: replace href with the actual repo URL -->
         <a href="https://github.com/vaibhav-24hr"><img src="https://img.shields.io/badge/Source-181717?style=for-the-badge&logo=github&logoColor=white" alt="Source" /></a>
       </p>
     </td>
@@ -144,12 +129,23 @@
         <code>Spring Boot</code> <code>MySQL</code> <code>JWT</code> <code>JS</code>
       </p>
       <p align="center">
-        <!-- TODO: replace href with the actual repo URL -->
-        <a href="https://github.com/vaibhav-24hr"><img src="https://img.shields.io/badge/Source-181717?style=for-the-badge&logo=github&logoColor=white" alt="Source" /></a>
+        <a href="https://github.com/vaibhav-24hr/expenseapp_23"><img src="https://img.shields.io/badge/Source-181717?style=for-the-badge&logo=github&logoColor=white" alt="Source" /></a>
       </p>
     </td>
   </tr>
 </table>
+
+---
+
+### 📊 GitHub Stats
+
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=vaibhav-24hr&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&include_all_commits=true" height="170" alt="GitHub Stats" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=vaibhav-24hr&theme=tokyonight&hide_border=true" height="170" alt="GitHub Streak" />
+</div>
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=vaibhav-24hr&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" alt="Top Languages" />
+</div>
 
 <!--
 ### 🌱 Currently Learning
