@@ -44,10 +44,11 @@
     }
   ],
   "skills": [
-    {"category": "LANGUAGES", "items": ["JAVA", "PYTHON", "TYPESCRIPT", "JAVASCRIPT", "SQL"]},
-    {"category": "FRONTEND", "items": ["REACT", "NEXT.JS", "TAILWIND", "VITE", "REDUX"]},
-    {"category": "BACKEND", "items": ["NODE.JS", "EXPRESS", "SPRING", "HIBERNATE", "MONGODB"]},
-    {"category": "AI & CLOUD", "items": ["OPENAI", "GEMINI", "AWS", "DOCKER", "GIT"]}
+    {"category": "LANGUAGES", "items": ["JAVA", "SQL", "PYTHON", "TYPESCRIPT", "JAVASCRIPT", "C++", "HTML5"]},
+    {"category": "FRAMEWORKS", "items": ["SPRING BOOT", "HIBERNATE", "REACT", "NODE.JS", "NEXT.JS", "TAILWIND"]},
+    {"category": "DATABASES", "items": ["POSTGRESQL", "MYSQL", "SQL SERVER", "MONGODB", "REDIS"]},
+    {"category": "TESTING & CI/CD", "items": ["JUNIT", "JENKINS", "GITHUB ACTIONS", "POSTMAN", "DOCKER"]},
+    {"category": "SYSTEMS & CLOUD", "items": ["KAFKA", "RABBITMQ", "DOCKER", "AWS", "LINUX", "GIT"]}
   ],
   "contacts": [
     {"label": "EMAIL", "url": "mailto:vaibhavcan24@gmail.com"},

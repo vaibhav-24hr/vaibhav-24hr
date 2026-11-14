@@ -17,9 +17,10 @@
 
 <p align="center"><img src="assets/stage/h-skills.svg" width="100%" alt="Tech Arsenal" /><br>
 <img src="assets/stage/skill-0.svg" width="100%" alt="LANGUAGES" /><br>
-<img src="assets/stage/skill-1.svg" width="100%" alt="FRONTEND" /><br>
-<img src="assets/stage/skill-2.svg" width="100%" alt="BACKEND" /><br>
-<img src="assets/stage/skill-3.svg" width="100%" alt="AI &amp; CLOUD" /><br>
+<img src="assets/stage/skill-1.svg" width="100%" alt="FRAMEWORKS" /><br>
+<img src="assets/stage/skill-2.svg" width="100%" alt="DATABASES" /><br>
+<img src="assets/stage/skill-3.svg" width="100%" alt="TESTING &amp; CI/CD" /><br>
+<img src="assets/stage/skill-4.svg" width="100%" alt="SYSTEMS &amp; CLOUD" /><br>
 </p>
 
 <p align="center"><img src="assets/stage/h-contact.svg" width="100%" alt="Contact" /><br>

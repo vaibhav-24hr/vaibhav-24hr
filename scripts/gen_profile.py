@@ -299,29 +299,49 @@ ICON_MAP = {
     "PYTHON": "python",
     "TYPESCRIPT": "ts",
     "JAVASCRIPT": "js",
+    "C++": "cpp",
+    "CPP": "cpp",
+    "C": "c",
     "SQL": "postgres",
     "POSTGRES": "postgres",
+    "POSTGRESQL": "postgres",
     "MYSQL": "mysql",
-    "REACT": "react",
-    "NEXT.JS": "nextjs",
-    "TAILWIND": "tailwind",
-    "VITE": "vite",
-    "REDUX": "redux",
-    "NODE.JS": "nodejs",
-    "EXPRESS": "express",
+    "SQL SERVER": "sqlserver",
+    "SQLSERVER": "sqlserver",
+    "HTML": "html",
+    "HTML5": "html",
+    "CSS": "css",
+    "CSS3": "css",
     "SPRING": "spring",
     "SPRING BOOT": "spring",
     "HIBERNATE": "hibernate",
+    "REACT": "react",
+    "NODE.JS": "nodejs",
+    "NODEJS": "nodejs",
+    "NEXT.JS": "nextjs",
+    "NEXTJS": "nextjs",
+    "TAILWIND": "tailwind",
+    "VITE": "vite",
+    "REDUX": "redux",
     "MONGODB": "mongodb",
-    "OPENAI": "openai",
-    "GEMINI": "gemini",
-    "MEDIAPIPE": "python",
-    "AWS": "aws",
+    "REDIS": "redis",
+    "JUNIT": "junit",
+    "JUNIT 5": "junit",
+    "JENKINS": "jenkins",
+    "GITHUB ACTIONS": "githubactions",
+    "ACTIONS": "githubactions",
+    "POSTMAN": "postman",
+    "KAFKA": "kafka",
+    "APACHE KAFKA": "kafka",
+    "RABBITMQ": "rabbitmq",
     "DOCKER": "docker",
+    "AWS": "aws",
+    "LINUX": "linux",
+    "GIT": "git",
     "FIREBASE": "firebase",
     "SUPABASE": "supabase",
-    "GIT": "git",
-    "LINUX": "linux",
+    "OPENAI": "openai",
+    "GEMINI": "gemini",
 }
 ICONS_DIR = os.path.join(ROOT, "assets", "icons")
 
@@ -349,17 +369,21 @@ def skill_card(i, skill_group):
     cat = skill_group["category"]
     items = skill_group["items"]
     rot = [-1.0, 1.2, -0.8, 1.0][i % 4]
+
+    cat_w = max(135, len(cat) * 9.5 + 24)
+    cat_fs = 12 if len(cat) > 14 else 14
+
     b = [
         f'<g transform="rotate({rot} 450 {H/2:.0f})"><g class="drop" style="animation-delay:{.15+i*.12:.2f}s">',
         f'<polygon points="26,10 {W-26},6 {W-32},{H-6} 30,{H-4}" fill="{RED}" transform="translate(6,5)"/>',
         f'<polygon points="26,10 {W-26},6 {W-32},{H-6} 30,{H-4}" fill="#000" stroke="#fff" stroke-width="2.5"/>',
-        f'<g transform="translate(44,14) skewX(-12)"><rect width="135" height="40" fill="#fff"/>'
-        f'<text x="67" y="26" font-family="{SANS}" font-size="14" fill="#000" text-anchor="middle">{esc(cat)}</text></g>',
+        f'<g transform="translate(44,14) skewX(-12)"><rect width="{cat_w:.0f}" height="40" fill="#fff"/>'
+        f'<text x="{cat_w/2:.0f}" y="26" font-family="{SANS}" font-size="{cat_fs}" fill="#000" text-anchor="middle">{esc(cat)}</text></g>',
     ]
     icon_size = 44
-    gap = 18
+    gap = 16
     by = int((H - icon_size) / 2)
-    start_x = 210
+    start_x = int(44 + cat_w + 22)
     for idx, item in enumerate(items):
         bx = start_x + idx * (icon_size + gap)
         icon_key = ICON_MAP.get(item.upper(), "python")
@@ -373,6 +397,7 @@ def skill_card(i, skill_group):
             f'</g>'
         )
     b.append("</g></g>")
+    return svg(W, H, f"{cat}: {', '.join(items)}", "".join(b))
     return svg(W, H, f"{cat}: {', '.join(items)}", "".join(b))
 
 
