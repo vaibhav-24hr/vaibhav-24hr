@@ -1,0 +1,5 @@
+preview.html
+README.original.md
+__pycache__/
+*.pyc
+.DS_Store

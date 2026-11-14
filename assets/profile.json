@@ -1,0 +1,34 @@
+{
+  "stats": {
+    "repos": 23,
+    "stars": 24,
+    "commits": 300,
+    "followers": 7
+  },
+  "repos": {
+    "aura": {
+      "stars": 8,
+      "description": "AI-Powered Creator Coaching Platform integrating Google Gemini API & MediaPipe",
+      "url": "https://aura-caliente.netlify.app/",
+      "language": "React Native"
+    },
+    "bloomup": {
+      "stars": 4,
+      "description": "AI-Powered Family Management Platform leveraging OpenAI & AWS",
+      "url": "https://bloomup.onrender.com/",
+      "language": "Node.js"
+    },
+    "beacon": {
+      "stars": 2,
+      "description": "Transit Reporting Progressive Web App with offline-first capabilities",
+      "url": "https://github.com/vaibhav-24hr",
+      "language": "PWA"
+    },
+    "expenseapp_23": {
+      "stars": 1,
+      "description": "Full-Stack Financial Tracker built with Spring Boot MVC and MySQL",
+      "url": "https://github.com/vaibhav-24hr/expenseapp_23",
+      "language": "Java"
+    }
+  }
+}
