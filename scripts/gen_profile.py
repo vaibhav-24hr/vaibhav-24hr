@@ -294,22 +294,90 @@ def menu_item(i, n, t):
     return svg(W, H, title, "".join(b), css)
 
 
+ICON_MAP = {
+    "JAVA": "java",
+    "PYTHON": "python",
+    "TYPESCRIPT": "ts",
+    "JAVASCRIPT": "js",
+    "SQL": "postgres",
+    "POSTGRES": "postgres",
+    "MYSQL": "mysql",
+    "REACT": "react",
+    "NEXT.JS": "nextjs",
+    "TAILWIND": "tailwind",
+    "VITE": "vite",
+    "REDUX": "redux",
+    "NODE.JS": "nodejs",
+    "EXPRESS": "express",
+    "SPRING": "spring",
+    "SPRING BOOT": "spring",
+    "HIBERNATE": "hibernate",
+    "MONGODB": "mongodb",
+    "OPENAI": "openai",
+    "GEMINI": "gemini",
+    "MEDIAPIPE": "python",
+    "AWS": "aws",
+    "DOCKER": "docker",
+    "FIREBASE": "firebase",
+    "SUPABASE": "supabase",
+    "GIT": "git",
+    "LINUX": "linux",
+}
+ICONS_DIR = os.path.join(ROOT, "assets", "icons")
+
+
+def get_icon_svg(icon_key, x, y, size=26):
+    path = os.path.join(ICONS_DIR, f"{icon_key}.svg")
+    if not os.path.exists(path):
+        return ""
+    with open(path, "r", encoding="utf-8") as f:
+        content = f.read()
+    m = re.search(r'viewBox="([^"]+)"', content)
+    vb = m.group(1) if m else "0 0 256 256"
+    inner = re.sub(r"<\?xml[^>]*\?>", "", content)
+    inner = re.sub(r"<svg[^>]*>", "", inner, count=1)
+    inner = inner.rsplit("</svg>", 1)[0]
+    prefix = f"ic_{icon_key}_"
+    inner = re.sub(r'id="([^"]+)"', rf'id="{prefix}\1"', inner)
+    inner = re.sub(r"url\(#([^)]+)\)", rf"url(#{prefix}\1)", inner)
+    return f'<svg x="{x}" y="{y}" width="{size}" height="{size}" viewBox="{vb}">{inner}</svg>'
+
+
 def skill_card(i, skill_group):
-    """Animated Persona-5 style tech category card."""
-    H = 62
+    """Animated Persona-5 style tech category card with official vector logos."""
+    H = 68
     cat = skill_group["category"]
-    items = "  ·  ".join(skill_group["items"])
+    items = skill_group["items"]
     rot = [-1.0, 1.2, -0.8, 1.0][i % 4]
     b = [
-        f'<g transform="rotate({rot} 450 31)"><g class="drop" style="animation-delay:{.15+i*.12:.2f}s">',
+        f'<g transform="rotate({rot} 450 {H/2:.0f})"><g class="drop" style="animation-delay:{.15+i*.12:.2f}s">',
         f'<polygon points="26,10 {W-26},6 {W-32},{H-6} 30,{H-4}" fill="{RED}" transform="translate(6,5)"/>',
         f'<polygon points="26,10 {W-26},6 {W-32},{H-6} 30,{H-4}" fill="#000" stroke="#fff" stroke-width="2.5"/>',
-        f'<g transform="translate(44,13) skewX(-12)"><rect width="130" height="34" fill="#fff"/>'
-        f'<text x="65" y="23" font-family="{SANS}" font-size="15" fill="#000" text-anchor="middle">{esc(cat)}</text></g>',
-        f'<text x="195" y="37" font-family="{MONO}" font-size="13" font-weight="700" fill="#fff">{esc(items)}</text>',
-        "</g></g>",
+        f'<g transform="translate(44,14) skewX(-12)"><rect width="135" height="40" fill="#fff"/>'
+        f'<text x="67" y="26" font-family="{SANS}" font-size="14" fill="#000" text-anchor="middle">{esc(cat)}</text></g>',
     ]
-    return svg(W, H, f"{cat}: {items}", "".join(b))
+    n = len(items)
+    avail_w = W - 210 - 45
+    badge_w = min(124, int((avail_w - (n - 1) * 10) / n))
+    badge_h = 40
+    by = 14
+    for idx, item in enumerate(items):
+        bx = 210 + idx * (badge_w + 10)
+        icon_key = ICON_MAP.get(item.upper(), "python")
+        icon_svg_str = get_icon_svg(icon_key, bx + 7, by + 7, size=26)
+        display_name = item
+        if len(display_name) > 10:
+            display_name = display_name[:9] + "…"
+        font_sz = 11 if len(display_name) > 7 else 12
+        b.append(
+            f'<g class="pop" style="animation-delay:{.25+i*.1+idx*.05:.2f}s">'
+            f'<rect x="{bx}" y="{by}" width="{badge_w}" height="{badge_h}" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>'
+            f'{icon_svg_str}'
+            f'<text x="{bx + 38}" y="{by + 25}" font-family="{MONO}" font-size="{font_sz}" font-weight="700" fill="#fff">{esc(display_name)}</text>'
+            f'</g>'
+        )
+    b.append("</g></g>")
+    return svg(W, H, f"{cat}: {', '.join(items)}", "".join(b))
 
 
 def contact(i, c):

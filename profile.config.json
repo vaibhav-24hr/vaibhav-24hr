@@ -46,8 +46,8 @@
   "skills": [
     {"category": "LANGUAGES", "items": ["JAVA", "PYTHON", "TYPESCRIPT", "JAVASCRIPT", "SQL"]},
     {"category": "FRONTEND", "items": ["REACT", "NEXT.JS", "TAILWIND", "VITE", "REDUX"]},
-    {"category": "BACKEND", "items": ["NODE.JS", "EXPRESS", "SPRING BOOT", "HIBERNATE", "POSTGRES"]},
-    {"category": "AI & CLOUD", "items": ["OPENAI", "GEMINI", "MEDIAPIPE", "AWS", "DOCKER"]}
+    {"category": "BACKEND", "items": ["NODE.JS", "EXPRESS", "SPRING", "HIBERNATE", "MONGODB"]},
+    {"category": "AI & CLOUD", "items": ["OPENAI", "GEMINI", "AWS", "DOCKER", "GIT"]}
   ],
   "contacts": [
     {"label": "EMAIL", "url": "mailto:vaibhavcan24@gmail.com"},
