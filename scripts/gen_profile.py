@@ -326,7 +326,7 @@ ICON_MAP = {
 ICONS_DIR = os.path.join(ROOT, "assets", "icons")
 
 
-def get_icon_svg(icon_key, x, y, size=26):
+def get_icon_svg(icon_key, x, y, size=44):
     path = os.path.join(ICONS_DIR, f"{icon_key}.svg")
     if not os.path.exists(path):
         return ""
@@ -344,7 +344,7 @@ def get_icon_svg(icon_key, x, y, size=26):
 
 
 def skill_card(i, skill_group):
-    """Animated Persona-5 style tech category card with official vector logos."""
+    """Animated Persona-5 style tech category card with official vector logos only."""
     H = 68
     cat = skill_group["category"]
     items = skill_group["items"]
@@ -356,24 +356,20 @@ def skill_card(i, skill_group):
         f'<g transform="translate(44,14) skewX(-12)"><rect width="135" height="40" fill="#fff"/>'
         f'<text x="67" y="26" font-family="{SANS}" font-size="14" fill="#000" text-anchor="middle">{esc(cat)}</text></g>',
     ]
-    n = len(items)
-    avail_w = W - 210 - 45
-    badge_w = min(124, int((avail_w - (n - 1) * 10) / n))
-    badge_h = 40
-    by = 14
+    icon_size = 44
+    gap = 18
+    by = int((H - icon_size) / 2)
+    start_x = 210
     for idx, item in enumerate(items):
-        bx = 210 + idx * (badge_w + 10)
+        bx = start_x + idx * (icon_size + gap)
         icon_key = ICON_MAP.get(item.upper(), "python")
-        icon_svg_str = get_icon_svg(icon_key, bx + 7, by + 7, size=26)
-        display_name = item
-        if len(display_name) > 10:
-            display_name = display_name[:9] + "…"
-        font_sz = 11 if len(display_name) > 7 else 12
+        icon_svg_str = get_icon_svg(icon_key, bx, by, size=icon_size)
+        delay = 0.25 + i * 0.1 + idx * 0.05
         b.append(
-            f'<g class="pop" style="animation-delay:{.25+i*.1+idx*.05:.2f}s">'
-            f'<rect x="{bx}" y="{by}" width="{badge_w}" height="{badge_h}" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>'
+            f'<g class="pop" style="animation-delay:{delay:.2f}s">'
+            f'<title>{esc(item)}</title>'
+            f'<rect x="{bx+3}" y="{by+3}" width="{icon_size}" height="{icon_size}" rx="10" fill="{RED}"/>'
             f'{icon_svg_str}'
-            f'<text x="{bx + 38}" y="{by + 25}" font-family="{MONO}" font-size="{font_sz}" font-weight="700" fill="#fff">{esc(display_name)}</text>'
             f'</g>'
         )
     b.append("</g></g>")
