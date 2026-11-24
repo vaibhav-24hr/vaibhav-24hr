@@ -4,7 +4,7 @@
       python scripts/gen_profile.py
 -->
 
-<p align="center"><img src="assets/stage/hero.svg" width="100%" alt="Vaibhav Adesara, Software Engineer. 576 commits, 24 stars, 23 public repos." /></p>
+<p align="center"><img src="assets/stage/hero.svg" width="100%" alt="Vaibhav Adesara, Software Engineer. 585 commits, 24 stars, 23 public repos." /></p>
 
 <p align="center"><img src="assets/stage/about.svg" width="100%" alt="Software Engineer based in Vancouver specializing in full-stack architecture &amp; AI integrations. Currently Student Research Assistant at Langara College (ARC) migrating digital archives. Previously at SoluSoft Corporation building enterprise fraud detection platforms processing 10K+ cases daily." /></p>
 
